@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="css/gugudan.css">
+    <title>Document</title>
+    <style>
+        #container{
+          display:flex;
+          flex-wrap: wrap;
+         }  
+        #container div{
+      padding:0 20px 30px 20px;
+      margin:15px;
+      border:1px solid #ccc;
+      line-height:2;
+     
+    }
+div h3 {
+      text-align:center;
+      font-weight:bold;
+}
+    </style>
+</head>
+<body>
+    <h1>구구단</h1>
+    <div id="container"></div>
+    <script>
+        let i,j=1;
+        let containerDiv = document.getElementById("container");
+        let htmlTxt="";
+        for(i = 2; i< 10; i++){
+            htmlTxt=htmlTxt+"<div><h3>"+i+"단</h3>";
+                console.log(htmlTxt);
+            for(j = 2; j< 10;j++){
+              htmlTxt = htmlTxt+i+"X" + j+"="+i*j+"<br>"
+        }
+        htmlTxt = htmlTxt + "</div>";
+        }
+        containerDiv.innerHTML = htmlTxt
+    </script>
+    
+</body>
+</html>

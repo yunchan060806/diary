@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 연습</title>
+<style>
+	#msg{
+		border:2px solid cornflowerblue;
+		height:100px;
+	}
+</style>
+</head>
+	
+<body>
+<h1>JavaScript 연습</h1>
+<form action="">
+	<input type = "text" id="txt1">
+	<input type = "button" value="확인" onclick ="hello();">
+	<input type ="reset" value="취소" onclick = "cc();">
+
+	
+</form>
+<div id="msg"></div>
+
+<!--수정-->
+<script>
+	let $msgDiv= document.getElementById("msg");
+	function hello(){
+		$msgDiv.textContent = txt1.value;
+	function cc(){
+		$msgDiv.textContent = "";
+		txt1.focus();
+	}
+	}
+</script>
+
+
+
+</body>
+</html>

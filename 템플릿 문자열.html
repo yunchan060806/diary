@@ -1,0 +1,26 @@
+    <head>
+        <style>
+            h2{
+                background:lightblue;
+            }
+            #demo{
+            color:blue;
+            border : 1px solid #ccc;
+            background:lightcoral;
+            }
+          </style>
+    </head>
+    <body>
+        <h2>템플릿 문자열</h2>
+        <p>테믈릿 문자열은 문자열 내에 변수와 표현식을 허용한다.</p>
+        <p id = "demo"></p>
+        <script>
+            let $demoP =document.getElementById("demo");
+            let tags = ["1번째", "1번째", "3번째"];
+            let html="";
+            $demoP.innerHTML = tags;
+            for(let i=0; i<tags.length;i++){
+                html += "<li>" + tags[i] + "</li>";
+            }
+            $demoP.innerHTML = html;
+        </script>
